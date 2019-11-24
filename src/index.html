@@ -13,12 +13,19 @@
         <div class="container">
             <h1 class="pageTitle">リスト一覧</h1>
             <!--検索欄-->
-            <div class="search">
-                <!-- <div class="result">
-                    検索結果<span class="count">6件</span>
-                </div> -->
+            <div class="monthlySelect">
+                <!--TODO：月表示は選択式に変更-->
+                表示する月を選択してください：
+                <select name="" id="">
+                    <option disabled value="default">--選択--</option>
+                    <option value="Nov">11</option>
+                </select>
+                月
             </div>
-            <table border="1">
+            <div class="search">
+            </div>
+            <!--ヘッダ-->
+            <table class="list" border="1">
                 <tr>
                         <th>日付</th>
                         <th>週</th>
@@ -31,17 +38,21 @@
                         <th>所有者</th>
                         <th>三分類</th>
                 </tr>
+                <!--明細-->
+                <!--TODO:コレクションリストの描画に変更する-->
+                <!--TODO:リスト形式については直接編集を可能にする-->
                 <tr>
                         <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
-                        <td>11/23</td>
+                        <!--週表示は算出プロパティにより表示するか（DBとしては値を持たない）-->
+                        <td>1</td>  
+                        <td>食費</td>
+                        <td>パン</td>
+                        <td>0</td>
+                        <td>200</td>
+                        <td>10000</td>
+                        <td>現金</td>
+                        <td>IKUMA</td>
+                        <td>消費</td>
                 </tr>
                 </table>    
         </div>

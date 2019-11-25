@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>メインページ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="app">
         <div class="container">
-            <h1 class="pageTitle">リスト一覧</h1>
+            <h1 class="pageTitle">家計簿</h1>
             <!--検索欄-->
-            <div class="monthlySelect">
-                <!--TODO：月表示は選択式に変更-->
+            <div id="monthlySelect">
+                <!-- TODO：月表示は選択式に変更 -->
                 表示する月を選択してください：
                 <select name="" id="">
                     <option disabled value="default">--選択--</option>
@@ -26,7 +30,8 @@
             <div class="search">
             </div>
             <!--ヘッダ-->
-            <table class="list" border="1">
+            <table>
+            <thead>
                 <tr>
                         <th>日付</th>
                         <th>週</th>
@@ -39,13 +44,26 @@
                         <th>所有者</th>
                         <th>三分類</th>
                 </tr>
+            </thead>
+            <tbody>
                 <!--明細-->
                 <!--TODO:コレクションリストの描画に変更する-->
                 <!--TODO:リスト形式については直接編集を可能にする-->
-                <tr>
-                        <td>11/23</td>
+                <tr v-for="item in houseHoldD">
+                    <td>{{ item.date }}</td>
+                    <td>{{ item.weekNum }}</td>
+                    <td>{{ item.account }}</td>
+                    <td>{{ item.detail }}</td>
+                    <td>{{ item.income }}</td>
+                    <td>{{ item.spending }}</td>
+                    <td>{{ item.balance }}</td>
+                    <td>{{ item.modeOfPay }}</td>
+                    <td>{{ item.owner }}</td>
+                    <td>{{ item.conWasInv }}</td>
+
+                    <!-- <td>11/23</td> -->
                         <!--週表示は算出プロパティにより表示するか（DBとしては値を持たない）-->
-                        <td>1</td>  
+                        <!-- <td>1</td>  
                         <td>食費</td>
                         <td>パン</td>
                         <td>0</td>
@@ -53,11 +71,21 @@
                         <td>10000</td>
                         <td>現金</td>
                         <td>IKUMA</td>
-                        <td>消費</td>
+                        <td>消費</td> -->
                 </tr>
-                </table>    
+            </tbody>
+            </table>
+            <!-- ボタン  -->
+            <br>
+            <button type="button" class="btn btn-success">追加</button>
+            <button type="button" class="btn btn-success">行追加</button>
+            <button type="button" class="btn btn-success">削除</button>
+            <button type="button" class="btn btn-success">編集</button>
         </div>
     </div>
-    
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

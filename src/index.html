@@ -77,8 +77,9 @@
             </table>
             <!-- ボタン  -->
             <br>
-            <form class="add-form" v-on:submit.prevent="doAdd">
-                日付<input type="text" ref="date"></input>
+            <form v-on:submit.prevent="doAdd">
+                日付<input type="date" v-model="newDate">
+                <button type="submit" class="btn btn-success">追加</button>
                 <!-- 週<input type="text" ref="date"></input>
                 項目<input type="text" ref="date"></input>
                 詳細<input type="text" ref="date"></input>
@@ -88,7 +89,6 @@
                 支払方法<input type="text" ref="date"></input>
                 所有者<input type="text" ref="date"></input>
                 三分類<input type="text" ref="date"></input> -->
-                <button type="submit" class="btn btn-success">追加</button>
             </form>
             <br>
             <!-- <button type="button" class="btn btn-success">行追加</button>

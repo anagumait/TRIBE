@@ -1,4 +1,4 @@
-/*
+/* 
   ちょっと雑なので、クラスなど追加していい感じに調整してください
 */
 
@@ -9,7 +9,7 @@
 
   #app {
     max-width: 640px;
-    margin: 0 auto;
+    /* margin: 0 0 0  auto; */
   }
   table {
     width: 100%;
@@ -17,12 +17,11 @@
     font-size: 17px;
   }
   thead th {
-    border-bottom: 2px solid #0099e4; /*#d31c4a */
+    border-bottom: 2px solid #0099e4;
     color: #0099e4;
   }
-  th,
   th {
-    padding: 0 8px;
+    padding: 10px;
     line-height: 40px;
   }
   thead th.id {

@@ -1,7 +1,6 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue!',
         //家計簿明細
         houseHoldD: [
             {
@@ -63,7 +62,7 @@ var app = new Vue({
                 modeOfPay: '現金',
                 owner: 'みどりの',
                 conWasInv: '消費'
-            },
+            }
         ]
     }
 });

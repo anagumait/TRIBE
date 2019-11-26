@@ -77,10 +77,25 @@
             </table>
             <!-- ボタン  -->
             <br>
-            <button type="button" class="btn btn-success">追加</button>
-            <button type="button" class="btn btn-success">行追加</button>
+            <form class="add-form" v-on:submit.prevent="doAdd">
+                日付<input type="text" ref="date"></input>
+                <!-- 週<input type="text" ref="date"></input>
+                項目<input type="text" ref="date"></input>
+                詳細<input type="text" ref="date"></input>
+                収入<input type="text" ref="date"></input>
+                支出<input type="text" ref="date"></input>
+                残高<input type="text" ref="date"></input>
+                支払方法<input type="text" ref="date"></input>
+                所有者<input type="text" ref="date"></input>
+                三分類<input type="text" ref="date"></input> -->
+                <button type="submit" class="btn btn-success">追加</button>
+            </form>
+            <br>
+            <!-- <button type="button" class="btn btn-success">行追加</button>
+            <br>
             <button type="button" class="btn btn-success">削除</button>
-            <button type="button" class="btn btn-success">編集</button>
+            <br>0
+            <button type="button" class="btn btn-success">編集</button> -->
         </div>
     </div>
     <script src="index.js"></script>

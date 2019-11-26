@@ -64,10 +64,10 @@ var app = new Vue({
                 conWasInv: '消費'
             }
         ],
-        newDate: ''
+        newDate: (new Date()).getDate(),
     },
     methods: {
-        doAdd: function(e){
+        doAdd: function(){
             this.houseHoldD.push(
                 {
                     date: this.newDate,
